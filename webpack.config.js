@@ -1,5 +1,6 @@
 const webpack = require('@nativescript/webpack');
 const { resolve } = require('path');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 module.exports = (env) => {
   webpack.init(env);
@@ -10,7 +11,20 @@ module.exports = (env) => {
   webpack.chainWebpack((config) => {
     // change the "@" alias to "app/libs"
     config.resolve.alias.set('@', resolve(__dirname, 'app/libs'));
-    config.resolve.alias.set('fs', false);
+
+    //caso se queira que não carregue o modulo
+    // config.resolve.alias.set('fs', false);
+    config.resolve.alias.set('fs', 'browserify-fs');
+
+    config.resolve.fallback = {
+      "stream": require.resolve("stream-browserify"),
+      "buffer": require.resolve("buffer/"),
+      "path": require.resolve("path-browserify")
+    };
+
+    // config.resolve.plugins.set("NodePolyfillPlugin", new NodePolyfillPlugin());
+
+    // console.log(config);
   });
 
   return webpack.resolveConfig();

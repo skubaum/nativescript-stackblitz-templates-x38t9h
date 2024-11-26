@@ -10,13 +10,20 @@
     "basic-ftp": "^5.0.5"
   },
   "devDependencies": {
-    "@nativescript/preview-cli": "^1.0.14",
+    "@nativescript/preview-cli": "1.0.14",
     "@nativescript/stackblitz": "^0.0.8",
     "@nativescript/tailwind": "^2.1.0",
     "@nativescript/types-minimal": "~8.8.0",
     "@nativescript/webpack": "~5.0.0",
     "browserify-fs": "^1.0.0",
+    "net": "^1.0.2",
+    "node-polyfill-webpack-plugin": "^4.0.0",
+    "path": "^0.12.7",
+    "path-browserify": "^1.0.1",
+    "stream": "^0.0.3",
+    "stream-browserify": "^3.0.0",
     "tailwindcss": "~3.4.0",
+    "tls": "^0.0.1",
     "typescript": "~5.4.0",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4"
