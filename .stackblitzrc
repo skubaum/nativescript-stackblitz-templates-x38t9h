@@ -1,0 +1,5 @@
+{
+  "installDependencies": true,
+  "compileTrigger": "save",
+  "startCommand": "setup-nativescript-n && ns preview"
+}
