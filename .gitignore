@@ -2,6 +2,8 @@
 hooks/
 node_modules/
 platforms/
+App_Resources
+package-lock.json
 
 # Logs
 logs

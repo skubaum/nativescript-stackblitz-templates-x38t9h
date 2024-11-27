@@ -19,7 +19,7 @@ export class HelloWorldModel extends Observable {
 
   constructor() {
     super();
-    this.ftpService = new FtpService();
+    // this.ftpService = new FtpService();
     this.folders = new ObservableArray<SyncFolder>();
     this.ftpConfig = {
       host: '',

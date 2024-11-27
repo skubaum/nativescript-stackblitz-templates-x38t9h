@@ -10,6 +10,7 @@
     "basic-ftp": "^5.0.5"
   },
   "devDependencies": {
+    "@nativescript/android": "^8.8.6",
     "@nativescript/preview-cli": "1.0.14",
     "@nativescript/stackblitz": "^0.0.8",
     "@nativescript/tailwind": "^2.1.0",

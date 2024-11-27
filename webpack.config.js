@@ -15,11 +15,16 @@ module.exports = (env) => {
     //caso se queira que não carregue o modulo
     // config.resolve.alias.set('fs', false);
     config.resolve.alias.set('fs', 'browserify-fs');
+	config.resolve.alias.set('leveldown/package', false);
+	config.resolve.alias.set('leveldown', false);
+	
 
     config.resolve.fallback = {
       "stream": require.resolve("stream-browserify"),
       "buffer": require.resolve("buffer/"),
-      "path": require.resolve("path-browserify")
+      "path": require.resolve("path-browserify"),
+	  "leveldown/package": false,
+	  "leveldown": false
     };
 
     // config.resolve.plugins.set("NodePolyfillPlugin", new NodePolyfillPlugin());
