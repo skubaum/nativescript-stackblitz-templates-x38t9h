@@ -13,12 +13,12 @@ export class FtpService {
   private client: ftp.Client;
 
   constructor() {
-    try {
-      this.client = new ftp.Client();
-    } catch (ex) {
-      console.log(ex);
-    }
-    this.client.ftp.verbose = true;
+    // try {
+    //   this.client = new ftp.Client();
+    // } catch (ex) {
+    //   console.log(ex);
+    // }
+    // this.client.ftp.verbose = true;
   }
 
   async connect(config: FtpConfig): Promise<boolean> {
